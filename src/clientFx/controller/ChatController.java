@@ -1,4 +1,4 @@
-package controller;
+package clientFx.controller;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -41,7 +41,7 @@ public class ChatController implements AutoCloseable {
         );
         webViewMessages.getEngine().loadContent(messagesLayout.html());
         webViewMessages.getEngine().setUserStyleSheetLocation(
-                getClass().getResource("/view/application.css").toString());
+                getClass().getResource("/clientFx/view/application.css").toString());
     }
 
     @FXML
@@ -73,7 +73,7 @@ public class ChatController implements AutoCloseable {
     public void setUserName(String userName) {
         this.userName = userName;
         welcomeLabel.setText("Hello " + this.userName + "!");
-        Image myImage = new Image(getClass().getResource("/res/harveyspecter.png").toExternalForm(), false);
+        Image myImage = new Image(getClass().getResource("/clientFx/res/harveyspecter.png").toExternalForm(), false);
         ImagePattern pattern = new ImagePattern(myImage);
         circleImage.setFill(pattern);
     }
@@ -129,13 +129,13 @@ public class ChatController implements AutoCloseable {
         Element wrapper = new Element("li").attr("class", msgClass);
         Element image = new Element("img").attr("class", "avatar");
         if (msgClass.equals("response")){
-                image.attr("src", new File(getClass().getClassLoader().getResource("res/mikeross.png").getFile()).toURI().toString());
+                image.attr("src", new File(getClass().getClassLoader().getResource("/clientFx/res/mikeross.png").getFile()).toURI().toString());
                 new Element("span").attr("class", "author").append(senderName).appendTo(wrapper);
         }
 
         if (msgClass.equals("request"))
         {
-            image.attr("src", new File(getClass().getClassLoader().getResource("res/harveyspecter.png").getFile()).toURI().toString());
+            image.attr("src", new File(getClass().getClassLoader().getResource("clientFx/res/harveyspecter.png").getFile()).toURI().toString());
             System.out.println(senderName);
             new Element("span").attr("class", "author").append(userName).appendTo(wrapper);
         }
