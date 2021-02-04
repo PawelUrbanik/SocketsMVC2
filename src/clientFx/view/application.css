@@ -1,0 +1,79 @@
+html, body, div, span, h1, h2, h3, p, b, u, i, center, ol, ul, li, fieldset, form, label
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+body {
+	min-height: 100%;
+	background: #27ae60;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1em;
+	color: #32465a;
+	background: #E6EAEA;
+	max-width: 100%;
+}
+.author {
+	display: block;
+	margin-left: 50px;
+	font-size: 12px;
+	color: #435f7ad4;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+ul li {
+	display: inline-block;
+	clear: both;
+	float: left;
+	margin: 5px 5px 5px 5px;
+	width: 100%; /* calc(100% - 25px); */
+	word-wrap: break-word;  
+	font-size: 0.9em;
+}
+
+
+ul li:nth-last-child(1) {
+	margin-bottom: 20px;
+}
+ul li.request .avatar {
+	float: right;
+	margin: 5px 20px 5px 5px;
+}
+
+ul li.request .message  {
+	background: #435f7a;
+	color: #f5f5f5;
+	float: right;
+}
+
+ul li.welcome .message  {
+	background: #660000;
+	color: #f5f5f5;
+	float: left;
+}
+
+ul li.response .avatar {
+	float: left;
+	margin: 6px 6px 0 0;
+	/*display: none;*/
+}
+ul li.response .message {
+	background: #f5f5f5;
+}
+ul li .avatar {
+	width: 22px;
+	border-radius: 50%;
+}
+ul li .message {
+	position: relative;
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 20px;
+	max-width: 300px;
+	line-height: 18px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
